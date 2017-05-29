@@ -4,22 +4,22 @@
  .сoncat();
  */
 
-// let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
-// function moveZeroToEnd(arr) {
-//     let arrAfter = [];
-//     let arrBefore = [];
-//     for(i = 0; i < arr.length; i++){
-//         if(arr[i] === 0){
-//             arrAfter.push(arr[i]);
-//             arr.slice(arr.indexOf(arr[i]), 1);
-//             arrBefore.push(arr);
-//         }
-//     }
-//     console.log(arrBefore);
-//     lastArr = arrBefore.concat(arrAfter);
-//     console.log(lastArr);
-// };
-// moveZeroToEnd(arr1);
+let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
+function moveZeroToEnd(arr) {
+    let arrAfter = [];
+    let arrBefore = [];
+    for(i = 0; i < arr.length; i++){
+        if(arr[i] === 0){
+            arrAfter.push(arr[i]);
+            arr.slice(arr.indexOf(arr[i]), 1);
+            arrBefore.push(arr);
+        }
+    }
+    console.log(arrBefore);
+    lastArr = arrBefore.concat(arrAfter);
+    console.log(lastArr);
+};
+moveZeroToEnd(arr1);
 
 
 /*
@@ -32,18 +32,18 @@
  */
 // let numberArr = [0,200,10,25,15];
 
-// function compareNumeric(a, b) {
-//   if (a > b) return 1;
-//   if (a < b) return -1;
-// }
+function compareNumeric(a, b) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+}
 
-// function minimalNumber(arr) {
-//     let newArr = arr.sort(compareNumeric);
-//     let sumNumbers = newArr[0] + newArr[1];
+function minimalNumber(arr) {
+    let newArr = arr.sort(compareNumeric);
+    let sumNumbers = newArr[0] + newArr[1];
 
-//     console.log(sumNumbers);
-// };
-// minimalNumber(numberArr);
+    console.log(sumNumbers);
+};
+minimalNumber(numberArr);
 
 
 /*
@@ -52,16 +52,16 @@
  nameShuffler('Arnold Schwarzenegger'); => "Schwarzenegger Arnold"
  nameShuffler('James Bond'); => "Bond James"
  */
-// let someName =  'Arnold Schwarzenegger';
+let someName =  'Arnold Schwarzenegger';
 
-// function nameShuffler(str) {
-//     let arr1 = str.split(' ');
-//     let nameArr = [];
-//     nameArr.push(arr1[1]);
-//     nameArr.push(arr1[0]);
-//     console.log(nameArr.join(' '));
-// }
-// nameShuffler(someName);
+function nameShuffler(str) {
+    let arr1 = str.split(' ');
+    let nameArr = [];
+    nameArr.push(arr1[1]);
+    nameArr.push(arr1[0]);
+    console.log(nameArr.join(' '));
+}
+nameShuffler(someName);
 
 
 /*
@@ -70,19 +70,19 @@
  capMe(['jo', 'nelson', 'jurie'])     // returns ['Jo', 'Nelson', 'Jurie']
  capMe(['KARLY', 'DANIEL', 'KELSEY']) // returns ['Karly', 'Daniel', 'Kelsey']
 //  */
-// let mass = ['KARLY', 'DANIEL', 'KELSEY'];
-// function capMe(arr){
-//     let newArr = [];
-//     for( i = 0; i < arr.length; i++){
-//         let newElem = arr[i];
-//         let firstLetter = newElem.slice(0, 1).toUpperCase();
-//         let lastLetters = newElem.slice(1).toLowerCase();
-//         let fullWord = firstLetter + lastLetters;
-//         newArr.push(fullWord);
-//     }
-//     console.log(newArr);
-// };
-// capMe(mass);
+let mass = ['KARLY', 'DANIEL', 'KELSEY'];
+function capMe(arr){
+    let newArr = [];
+    for( i = 0; i < arr.length; i++){
+        let newElem = arr[i];
+        let firstLetter = newElem.slice(0, 1).toUpperCase();
+        let lastLetters = newElem.slice(1).toLowerCase();
+        let fullWord = firstLetter + lastLetters;
+        newArr.push(fullWord);
+    }
+    console.log(newArr);
+};
+capMe(mass);
 
 /*
  1. Найдите число отсутствующее в заданной последовательности
