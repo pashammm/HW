@@ -11,8 +11,8 @@ function moveZeroToEnd(arr) {
     for(i = 0; i < arr.length; i++){
         if(arr[i] === 0){
             arrAfter.push(arr[i]);
-            arr.slice(arr.indexOf(arr[i]), 1);
-            arrBefore.push(arr);
+        } else {
+            arrBefore.push(arr[i]);
         }
     }
     console.log(arrBefore);
