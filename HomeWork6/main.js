@@ -384,7 +384,7 @@ function reverseEachWord(string,arg) {
     console.log('Введите аргумент')
   }
 };
-reverseEachWord(sentance);
+// reverseEachWord(sentance);
 // reverseEachWord(sentance, true);
 // reverseEachWord(sentance,false);
 
@@ -406,10 +406,11 @@ function wordCounter(sentance){
   let obj = {};
   let count = 1;
     sentance.split(' ').forEach(function(element) {
-      if (element !== element){
-        obj[element] = +count - 1 ;
+      if (element !== undefined){
+        obj[element] = obj[element] + 1 ;
+      } else {
+        obj[element] = 1;
       }
-      obj[element] = count;
     }, this);
   return obj;
 }
@@ -428,7 +429,7 @@ function createHashTags(arr) {
 
   console.log(obj);
 }
-createHashTags(listOfCompanys)
+// createHashTags(listOfCompanys)
 
 // @ SUPER
 /*
@@ -447,10 +448,11 @@ let notUniqArray = [1, 1, 2, 2, 2, 5, 10, 25, 30, 5, 1, 0, 22, 3, 10, 3];
 
 
 function uniqueElements(arr) {
-  let newArr = []
-  
+  return arr.filter(function (element,index){
+    return arr.indexOf(element) == index;
+  })
 }
-// uniqueElements(notUniqArray)
+console.log(uniqueElements(notUniqArray));
 //
 //console.log(uniqueElements(notUniqArray)); //1,2,5,10,25,30,0,22,3,
 //console.log(uniqueElements([1, 1, 2, 3, 3])); // 1,2,3
